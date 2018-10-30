@@ -1,11 +1,17 @@
 {
-    "name": "socialiteproviders/naver",
+    "name": "airteltour/naver",
     "description": "Naver OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
         "name": "Doojin So",
         "email": "sodoojin@gmail.com"
     }],
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "https://packages.airteltour.com"
+        }
+    ],
     "require": {
         "php": "^5.6 || ^7.0",
         "socialiteproviders/manager": "~2.0 || ~3.0"

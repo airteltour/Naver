@@ -1,5 +1,5 @@
 {
-    "name": "airteltour/naver",
+    "name": "airteltour/naverSocialiteProvider",
     "description": "Naver OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{

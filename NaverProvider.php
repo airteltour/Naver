@@ -5,6 +5,7 @@ namespace SocialiteProviders\Naver;
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
+use Illuminate\Support\Arr;
 
 class NaverProvider extends AbstractProvider implements ProviderInterface
 {
@@ -94,10 +95,11 @@ class NaverProvider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['id'],
-            'nickname' => $user['nickname'],
-            'email'    => $user['email'],
-            'avatar'   => $user['profile_image'],
+            'id'       => Arr::get($user, 'id'),
+            'name'     => Arr::get($user, 'name'),
+            'nickname' => Arr::get($user, 'nickname'),
+            'email'    => Arr::get($user, 'email'),
+            'avatar'   => Arr::get($user, 'profile_image'),
         ]);
     }
 
